@@ -1,0 +1,27 @@
+cd                                          
+mkdir task
+cd task
+pwd
+mkdir test1
+cd test1
+touch file{1,2,3}.txt
+ls
+cd ..
+mkdir test2
+rmdir test2
+rm test1/file2.txt
+mkdir test3 && touch test3/file{1,2}.txt
+rm -rf test3
+mkdir test4
+mv test1/file{1,3}.txt test4/
+echo line1 >> test4/file1.txt
+echo line2 >> test4/file1.txt
+echo line3 >> test4/file1.txt
+cat test4/file1.txt
+echo line1 >> test4/file3.txt
+echo line2 >> test4/file3.txt
+echo line3 >> test4/file3.txt
+cat test4/file{1,3}.txt
+vim test4/file1.txt
+i
+:wq 
