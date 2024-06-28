@@ -1,0 +1,26 @@
+mkdir test3
+echo -e "row1\nrow2\nrow3\nrow4" > test3/file4.txt
+echo -e "row1\nrow2\nrow3\nrow4" > test3/file5.txt
+echo -e "row1\nrow2\nrow3\nrow4" > test3/file6.txt
+grep "row2" test3/file5.txt
+grep -r "row" test3
+grep -c "row" test3/file6.txt
+find test3 -name "file5.txt"
+find test3 -name "file5.txt" -delete
+echo "test" > test3/file4.txt
+sed 's/test/fail/g' test3/file4.txt
+echo "test" >> test3/file4.txt
+ps aux
+kill 666
+ping artsiomrusau.com
+ping -c 5 artsiomrusau.com
+curl "https://petstore.swagger.io/v2/pet/findByStatus?status=available"
+curl -X POST -H "Content-Type: application/json" --data '{
+  "id": 1,
+  "username": "11",     
+  "firstName": "111",   
+  "lastName": "1111",
+  "email": "1111111@example.com",
+  "password": "password",
+  "phone": "1234567890"
+}' "https://petstore.swagger.io/v2/user"
